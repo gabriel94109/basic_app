@@ -1,0 +1,15 @@
+one:
+  title: MyString
+  permalink: MyString
+  description: MyString
+  keywords: MyString
+  content: MyText
+  markdown: MyText
+
+two:
+  title: MyString
+  permalink: MyString
+  description: MyString
+  keywords: MyString
+  content: MyText
+  markdown: MyText

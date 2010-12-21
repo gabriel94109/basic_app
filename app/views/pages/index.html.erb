@@ -1,0 +1,27 @@
+<% title "Pages" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Permalink</th>
+    <th>Description</th>
+    <th>Keywords</th>
+    <th>Content</th>
+    <th>Markdown</th>
+  </tr>
+  <% for page in @pages %>
+    <tr>
+      <td><%= page.title %></td>
+      <td><%= page.permalink %></td>
+      <td><%= page.description %></td>
+      <td><%= page.keywords %></td>
+      <td><%= page.content %></td>
+      <td><%= page.markdown %></td>
+      <td><%= link_to "Show", page %></td>
+      <td><%= link_to "Edit", edit_page_path(page) %></td>
+      <td><%= link_to "Destroy", page, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Page", new_page_path %></p>

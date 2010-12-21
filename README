@@ -1,0 +1,41 @@
+* Helpful Commands *
+
+Initialize Project 
+---------
+rails new projectname -T
+cp README projectname/
+cp Gemfile projectname/
+cp javascript ?
+cp css ?
+bundle install
+rails g nifty:layout
+rails g nifty:scaffold page title:string permalink:string description:string keywords:string content:text markdown:text
+rake db:migrate
+rm public/index.html
+vi config/routes, root :to => "pages#index"
+rails s
+http://localhost:3000/
+
+Devise
+------
+rails g devise:install
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+rails g devise User
+vi /app/models/user.rb
+vi /db/migrate/xxx 
+rails g migration add_username_to_users username:string
+rake db:migrate
+rails g devise:views
+vi app/views/devise/registrations/new.html.erb
+vi app/views/devise/registrations/edit.html.erb
+vi app/views/devise/sessions/new.html.erb
+rake routes
+rails s
+http://localhost:3000/users/sign_up
+
+Omniauth
+--------
+/config/initializers/omniauth.rb
+rails g nifty:scaffold authentication user_id:integer provider:string uid:string index create destroy
+rake db:migrate
+http://localhost:3000/auth/twitter

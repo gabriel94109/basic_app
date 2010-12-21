@@ -1,0 +1,32 @@
+<% title "Page" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @page.title %>
+</p>
+<p>
+  <strong>Permalink:</strong>
+  <%= @page.permalink %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @page.description %>
+</p>
+<p>
+  <strong>Keywords:</strong>
+  <%= @page.keywords %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @page.content %>
+</p>
+<p>
+  <strong>Markdown:</strong>
+  <%= @page.markdown %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_page_path(@page) %> |
+  <%= link_to "Destroy", @page, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", pages_path %>
+</p>
